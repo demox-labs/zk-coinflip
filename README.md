@@ -1,2 +1,8 @@
-# zk-coinflip
-A Coin Flip Program Built for Aleo
+# coinflip.aleo
+
+## Build Guide
+
+To compile this Aleo program, run:
+```bash
+aleo build
+```
