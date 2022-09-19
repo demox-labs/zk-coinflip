@@ -11,13 +11,12 @@ record complete:
 
 function complete_challenge:
     input r0 as address.private; // acceptor
-    input r1 as u64.private; // aceptor seed
+    input r1 as u64.private; // acceptor seed
     input r2 as u64.private; // issuer seed
     input r3 as address.private; // winner
 
+    cast r0 0u64 r2 r1 self.caller r0 r3 into r4 as complete.record;
+    cast self.caller 0u64 r2 r1 self.caller r0 r3 into r5 as complete.record;
 
-    cast r0 0u64 r1 r2 self.caller r0 r0 into r3 as complete.record;
-    cast self.caller 0u64 r1 r2 self.caller r0 r0 into r4 as complete.record;
-
-    output r3 as complete.record;
     output r4 as complete.record;
+    output r5 as complete.record;
